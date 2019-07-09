@@ -1,0 +1,51 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<button (click) = "getdistrict()">district</button>
+
+<button (click) = "gettaluk()">taluk</button>
+
+
+<button (click) = "getdata()">data</button>
+
+
+<table>
+   
+<tr *ngFor="let data of result">
+  <td type="submit" class="custom-dataTable-td" (click) = "getcode(data.district)"   >+</td>
+  
+    
+  <td class="custom-dataTable-td">{{data.district}}</td>
+  <td class="custom-dataTable-td">{{data.elcot_csc_charge}}</td>
+  <td class="custom-dataTable-td">{{data.elcot_gov_charge}}</td>
+  <td class="custom-dataTable-td">{{data.elcot_transaction_no}}</td>
+  
+</tr>
+<tr [hidden]="!myVar" *ngFor="let data1 of talukdata">
+   <td class="custom-dataTable-td">{{data1.taluk}}</td>
+    <td class="custom-dataTable-td">{{data1.elcot_csc_charge}}</td>
+    <td class="custom-dataTable-td">{{data1.elcot_gov_charge}}</td>
+    <td class="custom-dataTable-td">{{data1.elcot_transaction_no}}</td>
+  </tr>
+
+
+</table>
+
+<table>
+
+    
+
+<tr *ngFor="let ck of schedule;  let i = index">
+
+    <td class="custom-dataTable-td">{{i + 1}}</td>
+    <td class="custom-dataTable-td">{{ck.annuityPaymentAmount}}</td>
+    <td class="custom-dataTable-td">{{ck.finalBalance}}</td>
+    <td class="custom-dataTable-td">{{ck.initialBalance}}</td>
+    <td class="custom-dataTable-td">{{ck.interestAmount}}</td>
+    <td class="custom-dataTable-td">{{ck.interestRate}}</td>
+    <td class="custom-dataTable-td">{{ck.paymentAmount}}</td>
+    <td class="custom-dataTable-td">{{ck.paymentDate}}</td>
+    <td class="custom-dataTable-td">{{ck.principalAmount}}</td>
+
+
+</tr>
+
+</table>
